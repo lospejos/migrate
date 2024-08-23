@@ -54,7 +54,7 @@ func parseURL(url string) (string, error) {
 		}
 		p = wd
 
-	} else if p[0:1] == "." || p[0:1] != "/" {
+	} else if p[0:1] != "/" {
 		// make path absolute if relative
 		abs, err := filepath.Abs(p)
 		if err != nil {
